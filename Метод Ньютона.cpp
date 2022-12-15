@@ -13,5 +13,5 @@ double fp(double n) {
 int main()
 {
     float a, b, e, x;
-
+    cin >> a >> b >> e;
 }
