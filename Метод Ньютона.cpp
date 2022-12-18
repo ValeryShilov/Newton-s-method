@@ -17,19 +17,23 @@ int main()
     int cnt = 0;
     bool flag = 1;
     cin >> a >> b >> e;
-    if (f(a) * fpp(a) >= 0) {
-        x1 = a;
+    if (f(a) * f(b) > 0) {
+        flag = 0;
+        cout << "На заданном промежутке корней нет" << endl;
+    }
+    if (f(a) * fpp(a) > 0) {
+        x2 = a;
     }
     else {
-        if (f(b) * f(a) >= 0) {
-            x1 = b;
+        if (f(b) * fpp(b) > 0) {
+            x2 = b;
         }
         else {
             cout << "На заданном промежутке корней нет" << endl;
             flag = 0;
         }
     }
-    if (flag = 1){ 
+    if (flag == 1){ 
         do {
             x1 = x2;
             x2 = x1 - (f(x1) / fp(x1));
